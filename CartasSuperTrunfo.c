@@ -89,14 +89,82 @@ int main() {
 
     // Comparação entre os atributos das cartas
     printf("\n\n--- Comparação entre os atributos das cartas ---\n");
-    printf("Vencedor na população: %s\n", (populacao1 > populacao2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor na área: %s\n", (area1 > area2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor no PIB: %s\n", (PIB1 > PIB2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor no número de pontos turísticos: %s\n", (pontosturisticos1 > pontosturisticos2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor no PIB per capita: %s\n", (PIBpercapita1 > PIBpercapita2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor no inverso da densidade populacional: %s\n", (inversodadensidade1 > inversodadensidade2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor no superpoder: %s\n", (superpoder1 > superpoder2) ? "Carta 1" : "Carta 2");
-    printf("Vencedor na densidade populacional (menor vence): %s\n", (densidade1 < densidade2) ? "Carta 1" : "Carta 2");
+   
+
+    //usar atributos para compara las e dicidir qual carta venceu, usando a estrutura de if else, ou seja, tenho q mudar a estrutra acima de printf para if else 
+    
+    // Comparação do superpoder
+    if (superpoder1 > superpoder2) {
+        printf("A carta 1 venceu, atributo superpoder: %.2f\n", superpoder1);
+    } else if (superpoder2 > superpoder1) {
+        printf("A carta 2 venceu, atributo superpoder: %.2f\n", superpoder2);
+    } else {
+        printf("As cartas são iguais no atributo superpoder!\n");
+    }
+
+    // Comparação da densidade populacional
+    if (densidade1 < densidade2) {
+        printf("A carta 1 venceu na densidade populacional, com: %.2f habitantes/km²\n", densidade1);
+    } else if (densidade2 < densidade1) {
+        printf("A carta 2 venceu na densidade populacional, com: %.2f habitantes/km²\n", densidade2);
+    } else {
+        printf("As cartas são iguais na densidade populacional!\n");
+    }
+
+    // Comparação da população
+    if (populacao1 > populacao2) {
+        printf("A carta 1 venceu na população, com: %d habitantes\n", populacao1);
+    } else if (populacao2 > populacao1) {
+        printf("A carta 2 venceu na população, com: %d habitantes\n", populacao2);
+    } else {
+        printf("As cartas são iguais na população!\n");
+    }
+
+    // Comparação da área
+    if (area1 > area2) {
+        printf("A carta 1 venceu na área, com: %.2f km²\n", area1);
+    } else if (area2 > area1) {
+        printf("A carta 2 venceu na área, com: %.2f km²\n", area2);
+    } else {
+        printf("As cartas são iguais na área!\n");
+    }
+
+    // Comparação do PIB
+    if (PIB1 > PIB2) {
+        printf("A carta 1 venceu no PIB, com: %.2f bilhões\n", PIB1);
+    } else if (PIB2 > PIB1) {
+        printf("A carta 2 venceu no PIB, com: %.2f bilhões\n", PIB2);
+    } else {
+        printf("As cartas são iguais no PIB!\n");
+    }
+
+    // Comparação do número de pontos turísticos
+    if (pontosturisticos1 > pontosturisticos2) {
+        printf("A carta 1 venceu no número de pontos turísticos, com: %d pontos\n", pontosturisticos1);
+    } else if (pontosturisticos2 > pontosturisticos1) {
+        printf("A carta 2 venceu no número de pontos turísticos, com: %d pontos\n", pontosturisticos2);
+    } else {
+        printf("As cartas são iguais no número de pontos turísticos!\n");
+    }
+
+    // Comparação do PIB per capita
+    if (PIBpercapita1 > PIBpercapita2) {
+        printf("A carta 1 venceu no PIB per capita, com: %.2f\n", PIBpercapita1);
+    } else if (PIBpercapita2 > PIBpercapita1) {
+        printf("A carta 2 venceu no PIB per capita, com: %.2f\n", PIBpercapita2);
+    } else {
+        printf("As cartas são iguais no PIB per capita!\n");
+    }
+
+    // Comparação do inverso da densidade populacional
+    if (inversodadensidade1 > inversodadensidade2) {
+        printf("A carta 1 venceu no inverso da densidade populacional, com: %.2f\n", inversodadensidade1);
+    } else if (inversodadensidade2 > inversodadensidade1) {
+        printf("A carta 2 venceu no inverso da densidade populacional, com: %.2f\n", inversodadensidade2);
+    } else {
+        printf("As cartas são iguais no inverso da densidade populacional!\n");
+    }
+
 
     return 0;
 }
